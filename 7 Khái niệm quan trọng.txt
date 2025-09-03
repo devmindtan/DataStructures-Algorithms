@@ -1,0 +1,7 @@
+1. Dynamic programing (Quy hoạch động)
+2. BFS & DFS - Tree
+3. Recursion (Đệ quy)
+4. Binary Search
+5. Sliding Window
+6. Two pointers
+7. Hashing
