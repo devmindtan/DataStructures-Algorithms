@@ -9,7 +9,13 @@ function climbStairs(n) {
     dp[i] = dp[i - 1] + dp[i - 2];
   }
 
-  return dp[n];
+  return dp;
 }
 
-console.log(climbStairs(4));
+/*
+  - Xác định điều kiện đề bài
+  - Xác định base case
+  - Xác định input / output
+*/
+
+console.log(climbStairs(3));
