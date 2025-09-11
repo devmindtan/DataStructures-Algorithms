@@ -47,3 +47,26 @@
 //   return b;
 // }
 // console.log(fib(6));
+
+// function check(A, m, n) {
+//   let result = [];
+//   let sum = 0;
+//   for (let i = 0; i < m; i++) {
+//     for (let j = 0; j < n; j++) {
+//       if (A[i][j] < 0) {
+//         break;
+//       } else {
+//         sum = sum + A[i][j];
+//         result.push(sum);
+//       }
+//     }
+//   }
+//   return result;
+// }
+
+// const A = [
+//   [1, 3, 5],
+//   [7, 2, -4],
+//   [3, 6, 1],
+// ];
+// console.log(check(A, 3, 3)); // [4, 8, 9]
