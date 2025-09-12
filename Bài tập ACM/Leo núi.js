@@ -9,7 +9,7 @@ function findBestWay(mountain) {
   const m = mountain.length;
   const n = mountain[0].length;
   const dp = Array.from({ length: m }, () => Array(n).fill(0));
-  const nextStep = Array.from({ length: m }, () => Array(n).fill(1));
+  const nextStep = Array.from({ length: m }, () => Array(n).fill(-1));
 
   // dòng cuối
   dp[m - 1] = [...mountain[m - 1]];
@@ -43,7 +43,7 @@ function findBestWay(mountain) {
       let sum = 0;
 
       for (let i = 0; i < m; i++) {
-        sum += dp[i][curJ]; // tính tổng theo giá trị gốc
+        sum += mountain[i][curJ]; // tính tổng theo giá trị gốc
         path.push(dp[i][curJ]);
         curJ = nextStep[i][curJ];
         if (curJ === -1) break;
@@ -56,7 +56,7 @@ function findBestWay(mountain) {
     }
   }
 
-  return { dp, cost: bestSum, path: bestPath };
+  return { mountain, dp, cost: bestSum, path: bestPath, nextStep };
 }
 
 console.log(findBestWay(mountain));
