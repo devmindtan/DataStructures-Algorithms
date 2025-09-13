@@ -4,7 +4,7 @@ function longestCommonSubstring(a, b) {
 
   // dp mảng 2D
   const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
-
+  c = "abc";
   let maxLen = 0;
   let endIndex = 0; // vị trí kết thúc trong chuỗi a
 
@@ -25,7 +25,9 @@ function longestCommonSubstring(a, b) {
   return a.substring(endIndex - maxLen, endIndex);
 }
 
-const a = "abcdexy";
-const b = "xtbayabcdez";
+// const a = "abcdexy";
+const a = "abc";
+const b = "abcd";
+// const b = "xtbayabcdez";
 
 console.log(longestCommonSubstring(a, b));
