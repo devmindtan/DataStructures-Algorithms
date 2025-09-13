@@ -25,9 +25,7 @@ function longestCommonSubstring(a, b) {
   return a.substring(endIndex - maxLen, endIndex);
 }
 
-// const a = "abcdexy";
-const a = "abc";
-const b = "abcd";
-// const b = "xtbayabcdez";
+const a = "abcdexy";
+const b = "xtbayabcdez";
 
 console.log(longestCommonSubstring(a, b));
