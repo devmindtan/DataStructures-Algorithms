@@ -1,13 +1,13 @@
 # C1:
-def chan_le(n):
-    if (n % 2 == 0 and n > 0):
-        return "Yes"
-    else:
-        return "No"
+# def chan_le(n):
+#     if (n % 2 == 0 and n > 0):
+#         return "Yes"
+#     else:
+#         return "No"
 
 
-for i in range(int(input())):
-    print(chan_le(int(input())))
+# for i in range(int(input())):
+#     print(chan_le(int(input())))
 
 # C2:
 for i in range(int(input())):
