@@ -48,18 +48,24 @@
 # print(reverse(45))   # 54
 # print(reverse(907))  # 709
 
-x = "192.168.0.257"
-arr = [int(num) for num in x.split(".")]
-res = []
-for x in arr:
-    bits = [0] * 8
-    i = 7
-    while (x != 0 and i >= 0):
-        bits[i] = x % 2
-        x = x // 2
-        i -= 1
-    res.append("".join(str(b) for b in bits))
+# x = "192.168.0.257"
+# arr = [int(num) for num in x.split(".")]
+# res = []
+# for x in arr:
+#     bits = [0] * 8
+#     i = 7
+#     while (x != 0 and i >= 0):
+#         bits[i] = x % 2
+#         x = x // 2
+#         i -= 1
+#     res.append("".join(str(b) for b in bits))
 
 
-output = ".".join(res)
-print(output)
+# output = ".".join(res)
+# print(output)
+from functools import reduce
+nums = [2, 3, 4, 5]
+product = reduce(lambda x, y: x * y, nums)
+nums.remove(3)
+s = reduce(lambda x, y: x + y, nums, 10)
+print(product, s)
