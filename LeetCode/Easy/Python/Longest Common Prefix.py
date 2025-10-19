@@ -1,18 +1,24 @@
-from typing import List
+import sys
+import math
+from collections import defaultdict, Counter, deque
+from bisect import bisect_left, bisect_right
+import heapq
+
+input = sys.stdin.readline
 
 
-def longestCommonPrefix(strs: List[str]):
-    hash_table = {}
-    res = [[] for _ in range(len(strs))]
-    for ch in range(len(strs)):
-        n = strs[ch]
-        for i in range(len(n)):
-            hash_table[ch[i]] = hash_table.get(ch[i], 0) + 1
-            res[i].append(hash_table[ch[i]])
-    # for num in strs:
-
-    return res
+def solve():
+    arr = list(map(str, input().split()))
+    res = []
+    for chars in zip(*arr):
+        if len(set(chars)) == 1:
+            res.append(chars[0])
+        else:
+            break
+    print("".join(res))
 
 
-strs = ["ddcogs"]
-print(longestCommonPrefix(strs))
+if __name__ == "__main__":
+    t = int(input())
+    for _ in range(t):
+        solve()
