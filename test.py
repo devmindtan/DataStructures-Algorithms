@@ -95,19 +95,32 @@
 # solve()
 
 
-import random
+# import random
 
 
-def random_large_positive_integers(n):
-    """Sinh n số nguyên dương rất lớn (1 → 10^18)."""
-    return [random.randint(1, 10**5) for _ in range(n)]
+# def random_large_positive_integers(n):
+#     """Sinh n số nguyên dương rất lớn (1 → 10^18)."""
+#     return [random.randint(1, 10**5) for _ in range(n)]
 
 
-# Ví dụ:
-n = 1000000
-numbers = random_large_positive_integers(n)
-less_1e4 = sum(1 for x in numbers if x < 10000)
-print(f"Số nhỏ hơn {n:,}: {less_1e4:,} ({less_1e4 / len(numbers) * 100:.2f}%)")
+# # Ví dụ:
+# n = 1000000
+# numbers = random_large_positive_integers(n)
+# less_1e4 = sum(1 for x in numbers if x < 10000)
+# print(f"Số nhỏ hơn {n:,}: {less_1e4:,} ({less_1e4 / len(numbers) * 100:.2f}%)")
 # with open("output.txt", "w") as f:
 #     f.write(" ".join(map(str, numbers)))
 # print(" ".join(map(str, numbers)))
+num = 215123123
+# n = len(str(num))
+# arr = [0] * n
+
+# for i in range(n-1, -1, -1):
+#     arr[i] = num % 10
+#     num //= 10
+
+# str_num = str(num)
+# arr = [int(num) if int(num) <= 2 else None for num in str_num]
+
+
+print(1 % 2)
