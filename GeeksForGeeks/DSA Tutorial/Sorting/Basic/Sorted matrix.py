@@ -1,8 +1,16 @@
 def sortedMatrix(N, Mat):
-    res = []
+    x = []
     for i in range(N):
         for j in range(N):
-            pass
+            x.append(Mat[i][j])
+
+    x.sort()
+    k = 0
+    for i in range(N):
+        for j in range(N):
+            Mat[i][j] = x[k]
+            k += 1
+    return Mat
 
 
 N = 4

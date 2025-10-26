@@ -111,7 +111,7 @@
 # with open("output.txt", "w") as f:
 #     f.write(" ".join(map(str, numbers)))
 # print(" ".join(map(str, numbers)))
-num = 215123123
+# num = 215123123
 # n = len(str(num))
 # arr = [0] * n
 
@@ -122,5 +122,81 @@ num = 215123123
 # str_num = str(num)
 # arr = [int(num) if int(num) <= 2 else None for num in str_num]
 
+# import numpy as np
+# from itertools import combinations
+# print(1 % 2)
+# from math import factorial as f
+# n = 7
+# r = 3
+# ways = int(f(n)/(f(r)*f(n-r)))
+# print(f"Q2: {ways} ways")
 
-print(1 % 2)
+# n = 7
+# k = 3
+# M = 2
+# n = 3001
+# k = 400
+# M = 6
+# combs = [comb for comb in combinations(range(1, n+1), k)
+#          if all(comb[i+1] - comb[i] <= M for i in range(k-1))]
+
+# print(len(combs) % 9901)
+
+
+# n, k, M, mod = 3001, 400, 6, 9901
+# max_sum = (M - 1) * (k - 1)
+
+# # dp[s] = số cách chọn các khoảng d_i sao cho tổng = s
+# dp = np.zeros(max_sum + 1, dtype=np.int64)
+# dp[0] = 1
+
+# for _ in range(k - 1):
+#     dp = np.convolve(dp, np.ones(M, dtype=np.int64),
+#                      mode='full')[:max_sum + 1] % mod
+
+# limit = n - (k - 1)
+# res = 0
+# for s in range(max_sum + 1):
+#     val = limit - s
+#     if val <= 0:
+#         break
+#     res = (res + val * dp[s]) % mod
+
+# print(res)
+
+
+# def count_sequences_mod(N, K, M, P):
+#     if K == 0:
+#         return 1 % P
+#     if K == 1:
+#         return N % P
+
+#     limit = N - (K - 1)
+#     if limit <= 0:
+#         return 0
+
+#     Smax = (M - 1) * (K - 1)
+#     dp = [0] * (Smax + 1)
+#     dp[0] = 1
+
+#     for _ in range(K - 1):
+#         new_dp = [0] * (Smax + 1)
+#         prefix = 0
+#         for s in range(0, Smax + 1):
+#             prefix += dp[s]
+#             if s - M >= 0:
+#                 prefix -= dp[s - M]
+#             new_dp[s] = prefix % P
+
+#         dp = new_dp
+
+#     res = 0
+#     if min(Smax, limit - 1) >= 0:
+#         for s in range(0, min(Smax, limit - 1) + 1):
+#             res = (res + (limit - s) * dp[s]) % P
+
+#     return res
+
+
+# N, K, M, P = map(int, input().split())
+# print(count_sequences_mod(N, K, M, P))
