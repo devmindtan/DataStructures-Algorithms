@@ -1,0 +1,1 @@
+{"name":"Local: solve","url":"c:\\Documents\\Code\\DataStructures-Algorithms\\ICPC\\Gid-osh\\solve.py","tests":[{"id":1761732280657,"input":"3\n3\n2 8 3\n5\n2 4 9 6 5\n2\n1 100","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Documents\\Code\\DataStructures-Algorithms\\ICPC\\Gid-osh\\solve.py","group":"local","local":true}

@@ -47,12 +47,11 @@ def solve():
     dp = [0] * n
     for i in range(n):
         dp[i] = dogs[i][2]
-        print(dp[i], end=" ")
         for j in range(i):
             if dogs[j][1] <= dogs[i][1]:
                 dp[i] = max(dp[i], dp[j] + dogs[i][2])
 
-    print(max(dp), dp)
+    print(max(dp))
 
 
 solve()
