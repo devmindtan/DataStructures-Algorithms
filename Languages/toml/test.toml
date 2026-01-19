@@ -1,0 +1,10 @@
+# Đây là file cấu hình TOML mẫu
+title = "Cấu hình dự án của tôi"
+
+[database]
+server = "192.168.1.1"
+ports = [ 8000, 8001, 8002 ]
+enabled = true
+
+[owner]
+name = "devmindtan"

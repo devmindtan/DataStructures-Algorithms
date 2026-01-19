@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Kiem tra Code') {
+            steps {
+                // Kiểm tra lỗi Ruby bằng RuboCop
+                sh 'rubocop test.rb || echo "Co loi trinh bay!"'
+            }
+        }
+
+        stage('Chay Ung dung') {
+            steps {
+                // Chạy lệnh trong Makefile bạn đã viết
+                sh 'make run'
+            }
+        }
+
+        stage('Kiem tra Nginx') {
+            steps {
+                // Kiem tra file cau hinh Nginx co dung khong
+                sh 'nginx -t'
+            }
+        }
+    }
+}
