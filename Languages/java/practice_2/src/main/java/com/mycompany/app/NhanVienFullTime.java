@@ -8,7 +8,7 @@ Override hienThiThongTin()
 */
 public class NhanVienFullTime extends NhanVien implements ILuong {
 
-    protected double heSoLuong;
+    private double heSoLuong;
 
     public NhanVienFullTime() {
         super();

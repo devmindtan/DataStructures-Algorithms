@@ -9,8 +9,8 @@ Override hienThiThongTin()
 */
 public class NhanVienPartTime extends NhanVien implements ILuong {
 
-    protected double luongTheoGio;
-    protected int soGioLam;
+    private double luongTheoGio;
+    private int soGioLam;
 
     public NhanVienPartTime() {
         super();
